@@ -2,11 +2,13 @@ syntax = "proto3";
 package chen7gx.blog.blog;
 
 // this line is used by starport scaffolding # genesis/proto/import
+import "blog/post.proto";
 
 option go_package = "github.com/chen7gx/blog/x/blog/types";
 
 // GenesisState defines the capability module's genesis state.
 message GenesisState {
     // this line is used by starport scaffolding # genesis/proto/state
+		repeated Post postList = 1; // this line is used by starport scaffolding # genesis/proto/stateField
 }
 
